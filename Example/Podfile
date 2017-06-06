@@ -1,0 +1,6 @@
+use_frameworks!
+target 'RSTUtils_Tests' do
+  pod 'RSTUtils', :path => '../'
+  
+  
+end
