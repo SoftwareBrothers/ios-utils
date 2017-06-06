@@ -1,0 +1,16 @@
+PODS:
+  - RSTUtils (0.1.0)
+
+DEPENDENCIES:
+  - RSTUtils (from `../`)
+
+EXTERNAL SOURCES:
+  RSTUtils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RSTUtils: 242581ef38cc64a6ef72d0db13e9330760e5162e
+
+PODFILE CHECKSUM: 4582e8ff3d69c0efacfb27fa3263e37f562e453c
+
+COCOAPODS: 1.2.1
