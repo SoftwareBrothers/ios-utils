@@ -5,24 +5,22 @@
 [![License](https://img.shields.io/cocoapods/l/RSTUtils.svg?style=flat)](http://cocoapods.org/pods/RSTUtils)
 [![Platform](https://img.shields.io/cocoapods/p/RSTUtils.svg?style=flat)](http://cocoapods.org/pods/RSTUtils)
 
+## Motivation
+
+Set of helpfull protocols, classes, extensions etc. used in iOS projects at RST-IT.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
-RSTUtils is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+TODO: probably a private repo
 
-```ruby
-pod "RSTUtils"
-```
-
-## Author
+## Author(s)
 
 pgorzelany, piotr.gorzelany@gmail.com
+RST-IT iOS Team
 
 ## License
 
