@@ -28,15 +28,10 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/pgorzelany/RSTUtils.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
-  s.source_files = 'RSTUtils/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'RSTUtils' => ['RSTUtils/Assets/*.png']
-  # }
+  s.source_files = 'RSTUtils/Sources/**/*'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
