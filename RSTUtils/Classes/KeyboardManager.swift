@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc public protocol RSTKeyboardManagerDelegate: class {
+@objc public protocol KeyboardManagerDelegate: class {
     
     @objc optional func keyboardWillShow(with size: CGSize, animationTime: Double)
     @objc optional func keyboardWillHide()
@@ -16,7 +16,7 @@ import Foundation
     @objc optional func keyboardDidHide()
 }
 
-public final class RSTKeyboardManager {
+public final class KeyboardManager {
     
     private enum KeyboardState {
         case shown, hidden
@@ -24,7 +24,7 @@ public final class RSTKeyboardManager {
     
     // MARK: Properties
     
-    weak public var delegate: RSTKeyboardManagerDelegate?
+    weak public var delegate: KeyboardManagerDelegate?
     private var keyboardState: KeyboardState = .hidden
     
     // MARK: Lifecycle
