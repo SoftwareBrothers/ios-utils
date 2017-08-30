@@ -7,7 +7,7 @@
 
 ## Motivation
 
-Set of helpfull protocols, classes, extensions etc. used in iOS projects at RST-IT.
+Set of helpful protocols, classes, extensions etc. used in iOS projects at RST-IT.
 
 ## Example
 

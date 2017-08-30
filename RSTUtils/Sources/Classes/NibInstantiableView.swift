@@ -34,7 +34,7 @@ open class NibInstantiableView: UIView {
         let bundle = Bundle(for: type.self)
         let nib = UINib(nibName: nibName, bundle: bundle)
         let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        addSubviewConstrainedToEdges(nibView)
+        insertSubviewConstrainedToEdges(nibView, at: 0)
     }
     
     /** Called after view is instantated from a XiB */
