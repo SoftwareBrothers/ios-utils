@@ -15,7 +15,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-TODO: probably a private repo
+```
+pod 'RSTUtils'
+```
 
 ## Author(s)
 
