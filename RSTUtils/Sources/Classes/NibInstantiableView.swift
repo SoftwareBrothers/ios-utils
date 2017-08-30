@@ -44,8 +44,4 @@ open class NibInstantiableView: UIView {
         // It gives the subclass a chance to configure the view in the initializer and not repeat boilerplate init code
         fatalError("Implement in subclass")
     }
-    
-    func test<T: Protocol>(param: T) {
-        
-    }
 }
