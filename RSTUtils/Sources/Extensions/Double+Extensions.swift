@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Double {
+public extension Double {
     
     /** Rounds a number to the specified number of decimal places */
     func round(precision: Int) -> Double {

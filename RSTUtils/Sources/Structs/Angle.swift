@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Angle {
+public struct Angle: Equatable {
     
     static func degrees(from radians: CGFloat) -> CGFloat {
         return radians * 180 / CGFloat(Double.pi)
@@ -33,12 +33,12 @@ struct Angle {
     }
 }
 
-func +(lhs: Angle, rhs: Angle) -> Angle {
+public func +(lhs: Angle, rhs: Angle) -> Angle {
     return Angle(degrees: lhs.degrees + rhs.degrees)
 }
 
-extension Angle: Equatable {
-    static func ==(lhs: Angle, rhs: Angle) -> Bool {
+extension Angle {
+    public static func ==(lhs: Angle, rhs: Angle) -> Bool {
         return lhs.degrees == rhs.degrees
     }
 }
