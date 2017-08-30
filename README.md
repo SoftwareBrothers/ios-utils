@@ -26,8 +26,6 @@ pod 'RSTUtils'
   * UITableView+Extensions - typed api for cell registration and cell dequeueing
   * UICollectionView+Extensions - typed api for cell registration and cell dequeueing
 * Protocols
-  * AlertPresenter - protocol for presenting alerts
-  * ActivityPresenter - protocol for showing activity
   * NibLoadable - protocol and UIView extension for loading views from nibs
   * ReuseIdentifiable - protocol for views that have a reuse identifier
 * Structs
