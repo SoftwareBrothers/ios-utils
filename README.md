@@ -1,9 +1,7 @@
 # RSTUtils
 
-[![CI Status](http://img.shields.io/travis/pgorzelany/RSTUtils.svg?style=flat)](https://travis-ci.org/pgorzelany/RSTUtils)
 [![Version](https://img.shields.io/cocoapods/v/RSTUtils.svg?style=flat)](http://cocoapods.org/pods/RSTUtils)
 [![License](https://img.shields.io/cocoapods/l/RSTUtils.svg?style=flat)](http://cocoapods.org/pods/RSTUtils)
-[![Platform](https://img.shields.io/cocoapods/p/RSTUtils.svg?style=flat)](http://cocoapods.org/pods/RSTUtils)
 
 ## Motivation
 
@@ -18,6 +16,24 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```
 pod 'RSTUtils'
 ```
+
+## TOC
+
+* Classes
+  * NibInstantiableView - subclass this view to instantiate a view from Nib. Set the class as the Nib owner for it to work.
+* Extensions
+  * UIView+Extensions - extensions for adding subviews with constraints and other frequent view styling operations
+  * UITableView+Extensions - typed api for cell registration and cell dequeueing
+  * UICollectionView+Extensions - typed api for cell registration and cell dequeueing
+* Protocols
+  * AlertPresenter - protocol for presenting alerts
+  * ActivityPresenter - protocol for showing activity
+  * NibLoadable - protocol and UIView extension for loading views from nibs
+  * ReuseIdentifiable - protocol for views that have a reuse identifier
+* Structs
+  * Angle - use radians or degrees to initialize and angle, transform between the two
+* Utils
+  * KeyboardManager - used for managing the keyboard through the manager delegate methods
 
 ## Author(s)
 
