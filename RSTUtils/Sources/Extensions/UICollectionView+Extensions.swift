@@ -52,7 +52,7 @@ public extension UICollectionView {
         )
     }
 
-    public func dequeReusableHeaderView<T>(footerType: T.Type, for indexPath: IndexPath) -> T
+    public func dequeReusableFooterView<T>(footerType: T.Type, for indexPath: IndexPath) -> T
         where T: UICollectionReusableView, T: ReuseIdentifiable {
             let footerView = dequeueReusableSupplementaryView(
                 ofKind: UICollectionElementKindSectionFooter,
