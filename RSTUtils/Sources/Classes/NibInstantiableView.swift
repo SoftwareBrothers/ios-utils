@@ -42,6 +42,5 @@ open class NibInstantiableView: UIView {
         // Implement in subclasses
         // This method is here so it is always called in the initializers after the view was instantaited from the Nib.
         // It gives the subclass a chance to configure the view in the initializer and not repeat boilerplate init code
-        fatalError("Implement in subclass")
     }
 }

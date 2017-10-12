@@ -19,5 +19,50 @@ public extension UICollectionView {
     public func dequeReusableCell<T>(cellType: T.Type, for indexPath: IndexPath) -> T where T: UICollectionViewCell, T: ReuseIdentifiable {       
         return self.dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
-    
+
+    public func register<T>(headerType: T.Type) where T: UICollectionReusableView, T: NibLoadable, T: ReuseIdentifiable {
+        let bundle = Bundle(for: headerType)
+        let nib = UINib(nibName: T.nibName, bundle: bundle)
+        self.register(nib,
+                      forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                      withReuseIdentifier: headerType.reuseIdentifier
+        )
+    }
+
+    public func dequeReusableHeaderView<T>(headerType: T.Type, for indexPath: IndexPath) -> T
+        where T: UICollectionReusableView, T: ReuseIdentifiable {
+            let headerView = dequeueReusableSupplementaryView(
+                ofKind: UICollectionElementKindSectionHeader,
+                withReuseIdentifier: headerType.reuseIdentifier, for: indexPath
+            )
+
+            guard let header = headerView as? T else {
+                fatalError("Could no cast header")
+            }
+
+            return header
+    }
+
+    public func register<T>(footerType: T.Type) where T: UICollectionReusableView, T: NibLoadable, T: ReuseIdentifiable {
+        let bundle = Bundle(for: footerType)
+        let nib = UINib(nibName: T.nibName, bundle: bundle)
+        self.register(nib,
+                      forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+                      withReuseIdentifier: footerType.reuseIdentifier
+        )
+    }
+
+    public func dequeReusableHeaderView<T>(footerType: T.Type, for indexPath: IndexPath) -> T
+        where T: UICollectionReusableView, T: ReuseIdentifiable {
+            let footerView = dequeueReusableSupplementaryView(
+                ofKind: UICollectionElementKindSectionFooter,
+                withReuseIdentifier: footerType.reuseIdentifier, for: indexPath
+            )
+
+            guard let footer = footerView as? T else {
+                fatalError("Could no cast header")
+            }
+
+            return footer
+    }
 }
