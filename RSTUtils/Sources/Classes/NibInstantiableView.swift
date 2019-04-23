@@ -30,7 +30,7 @@ open class NibInstantiableView: UIView {
     }
     
     open func instantiateFromNib() {
-        let type = type(of: self)
+        let type = Swift.type(of: self)
         let bundle = Bundle(for: type.self)
         let nib = UINib(nibName: nibName, bundle: bundle)
         let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView

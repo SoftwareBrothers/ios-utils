@@ -24,7 +24,7 @@ public extension UICollectionView {
         let bundle = Bundle(for: headerType)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         self.register(nib,
-                      forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                      forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                       withReuseIdentifier: headerType.reuseIdentifier
         )
     }
@@ -32,7 +32,7 @@ public extension UICollectionView {
     public func dequeReusableHeaderView<T>(headerType: T.Type, for indexPath: IndexPath) -> T
         where T: UICollectionReusableView, T: ReuseIdentifiable {
             let headerView = dequeueReusableSupplementaryView(
-                ofKind: UICollectionElementKindSectionHeader,
+                ofKind: UICollectionView.elementKindSectionFooter,
                 withReuseIdentifier: headerType.reuseIdentifier, for: indexPath
             )
 
@@ -47,7 +47,7 @@ public extension UICollectionView {
         let bundle = Bundle(for: footerType)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         self.register(nib,
-                      forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+                      forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                       withReuseIdentifier: footerType.reuseIdentifier
         )
     }
@@ -55,7 +55,7 @@ public extension UICollectionView {
     public func dequeReusableFooterView<T>(footerType: T.Type, for indexPath: IndexPath) -> T
         where T: UICollectionReusableView, T: ReuseIdentifiable {
             let footerView = dequeueReusableSupplementaryView(
-                ofKind: UICollectionElementKindSectionFooter,
+                ofKind: UICollectionView.elementKindSectionFooter,
                 withReuseIdentifier: footerType.reuseIdentifier, for: indexPath
             )
 
